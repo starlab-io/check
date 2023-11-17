@@ -59,7 +59,7 @@ void *emalloc(size_t n)
 {
     void *p;
 
-    p = malloc(n);
+    p = calloc(n,1);
     if(p == NULL)
         eprintf("malloc of " CK_FMT_ZU " bytes failed:", __FILE__, __LINE__ - 2, n);
     return p;
